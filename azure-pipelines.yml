@@ -16,6 +16,11 @@ stages:
   jobs:
   - job: Build
     displayName: Build
+- task: Docker@2
+  inputs:
+    containerRegistry: 'AzureContainerServicesNatlab'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
     pool:
       vmImage: ubuntu-latest
     steps:
