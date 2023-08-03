@@ -1,6 +1,6 @@
 	#FROM databricksruntime/standard:10.4-LTS
 	FROM databricksruntime/standard:12.2-LTS
+	COPY log4j-web-3.0.0-alpha1.jar /databricks/jars/
 	COPY dmap-deid-spark_2.12-0.3.35-assembly.jar /databricks/jars/
-	%pip install log4j-web
 	
 	
